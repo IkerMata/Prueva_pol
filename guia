@@ -15,3 +15,5 @@
 
 4:Otras cosas
 -Si acabas de crear una ruta reinicia el node server con node index.js. Y verificar que escucha en el puerto correcto.
+-Los varchar y los data con ""
+-Los int sin ""
