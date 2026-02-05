@@ -1,0 +1,17 @@
+1:Instalaciones:
+-npm install
+-npm init -y
+-npm install express mysql2 dotenv
+
+2:Creacion y conexion de la base de datos:
+-En el fichero init.sql se encuentra la creacion de la base de datos y la creacion de las tablas.
+-En el fichero .env se encuentra la configuracion de la base de datos.
+-En el fichero index.js se encuentra la conexion a la base de datos.
+-En el fichero docker-compose.yml se encuentra la configuracion del docker, cambiar el nombre de la base de datos en el fichero docker-compose.yml
+-Despues levanta el docker con docker-compose up -d
+
+3:CRUD
+-En el fichero index.js se hacen las rutas para la base de datos CRUD
+
+4:Otras cosas
+-Si acabas de crear una ruta reinicia el node server con node index.js. Y verificar que escucha en el puerto correcto.

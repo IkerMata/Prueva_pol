@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: room_booking_db
+    environment:
+      MYSQL_ROOT_PASSWORD: "Vd4N&:x1vA!gVhtQ"
+      MYSQL_DATABASE: room_booking
+      MYSQL_USER: a24ikematgar_usuari
+      MYSQL_PASSWORD: "Vd4N&:x1vA!gVhtQ"
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    command: --default-authentication-plugin=mysql_native_password
