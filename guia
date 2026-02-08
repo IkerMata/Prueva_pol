@@ -4,10 +4,10 @@
 -npm install express mysql2 dotenv
 
 2:Creacion y conexion de la base de datos:
--En el fichero init.sql se encuentra la creacion de la base de datos y la creacion de las tablas.
--En el fichero .env se encuentra la configuracion de la base de datos.
--En el fichero index.js se encuentra la conexion a la base de datos.
--En el fichero docker-compose.yml se encuentra la configuracion del docker, cambiar el nombre de la base de datos en el fichero docker-compose.yml
+-fichero init.sql
+-fichero .env 
+-fichero index.js 
+-fichero docker-compose.yml 
 -Despues levanta el docker con docker-compose up -d
 
 3:CRUD
@@ -17,3 +17,35 @@
 -Si acabas de crear una ruta reinicia el node server con node index.js. Y verificar que escucha en el puerto correcto.
 -Los varchar y los data con ""
 -Los int sin ""
+
+Ejemplos:
+
+POST /api/rooms
+{
+  "name": "Sala de Juntes A",
+  "capacity": 10,
+  "location": "Planta 1"
+}
+
+PUT /api/rooms/:id
+{
+  "name": "Sala de Juntes A (Actualitzada)",
+  "capacity": 12,
+  "location": "Planta 1 - Ala Nord"
+}
+
+POST /api/reservations
+{
+  "room_id": 1,
+  "reserved_by": "Iker Mata",
+  "start_time": "2024-02-10 09:00:00",
+  "end_time": "2024-02-10 11:00:00"
+}
+
+PUT /api/reservations/:id
+{
+  "room_id": 1,
+  "reserved_by": "Iker Mata",
+  "start_time": "2024-02-10 10:00:00",
+  "end_time": "2024-02-10 12:00:00"
+}
